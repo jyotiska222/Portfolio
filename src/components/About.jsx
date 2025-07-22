@@ -48,10 +48,10 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Enhanced profile section */}
           <div className={`relative transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-            <div className="relative w-96 h-96 mx-auto">
+            <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 mx-auto">
               {/* Enhanced profile image placeholder */}
               <div className="relative w-full h-full bg-gradient-to-br from-blue-100 via-purple-50 to-blue-100 dark:from-blue-900/30 dark:via-purple-900/30 dark:to-blue-900/30 rounded-3xl flex items-center justify-center border-2 border-blue-200/50 dark:border-blue-700/50 backdrop-blur-sm overflow-hidden group">
-                <UserIcon className="w-32 h-32 text-blue-600 dark:text-blue-400 group-hover:scale-110 transition-transform duration-500" />
+                <UserIcon className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 text-blue-600 dark:text-blue-400 group-hover:scale-110 transition-transform duration-500" />
                 
                 {/* Floating skill badges */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
@@ -97,11 +97,11 @@ const About = () => {
             </div>
 
             {/* Enhanced stats grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mt-8 sm:mt-12">
               {stats.map((stat, index) => (
                 <div
                   key={stat.label}
-                  className={`relative p-6 bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-300 cursor-pointer transform hover:scale-105 hover:-translate-y-2 shadow-lg hover:shadow-xl group ${isVisible ? 'animate-slide-up opacity-100' : 'opacity-0'}`}
+                  className={`relative p-4 sm:p-6 bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-300 cursor-pointer transform hover:scale-105 hover:-translate-y-2 shadow-lg hover:shadow-xl group ${isVisible ? 'animate-slide-up opacity-100' : 'opacity-0'}`}
                   style={{ animationDelay: `${800 + index * 200}ms` }}
 
                 >

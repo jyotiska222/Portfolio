@@ -1,0 +1,101 @@
+const Education = () => {
+    const education = [
+        {
+            degree: "Bachelor of Science in Computer Science",
+            institution: "University of California, Berkeley",
+            period: "2015 - 2019",
+            location: "Berkeley, CA",
+            description: "Comprehensive computer science program with focus on software engineering and system design.",
+            coursework: [
+                "Data Structures & Algorithms",
+                "Software Engineering",
+                "Database Systems",
+                "Computer Networks",
+                "Machine Learning",
+                "Operating Systems"
+            ],
+            gpa: "3.8/4.0",
+            achievements: [
+                "Dean's List for 6 consecutive semesters",
+                "President of Computer Science Student Association",
+                "Winner of Annual Hackathon 2018"
+            ]
+        }
+    ]
+
+    return (
+        <section id="education" className="py-20 px-4 sm:px-6 lg:px-8 relative">
+            <div className="max-w-6xl mx-auto relative z-10">
+                <div className="text-center mb-16">
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">
+                        Education
+                    </h2>
+                    <div className="w-20 h-1 bg-blue-600 dark:bg-blue-400 mx-auto rounded-full"></div>
+                    <p className="text-text-secondary mt-4 max-w-2xl mx-auto">
+                        My academic background and educational achievements
+                    </p>
+                </div>
+
+                <div className="max-w-4xl mx-auto">
+                    {education.map((edu, index) => (
+                        <div key={index} className="mb-6 sm:mb-8">
+                            <div className="bg-surface border border-border-color rounded-xl p-4 sm:p-6 lg:p-8 hover:shadow-lg transition-all duration-300 hover:border-primary/30">
+                                {/* Header */}
+                                <div className="mb-4 sm:mb-6">
+                                    <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-3">
+                                        <h3 className="text-xl sm:text-2xl font-semibold text-text-primary">{edu.degree}</h3>
+                                        <span className="text-primary font-medium text-base sm:text-lg mt-1 lg:mt-0">{edu.period}</span>
+                                    </div>
+                                    <div className="flex flex-col md:flex-row md:items-center text-text-secondary mb-2">
+                                        <span className="font-medium text-base sm:text-lg">{edu.institution}</span>
+                                        <span className="hidden md:inline mx-2">•</span>
+                                        <span className="text-sm sm:text-base">{edu.location}</span>
+                                    </div>
+                                    {edu.gpa && (
+                                        <div className="mt-2">
+                                            <span className="text-text-secondary text-sm sm:text-base">GPA: </span>
+                                            <span className="text-primary font-semibold text-sm sm:text-base">{edu.gpa}</span>
+                                        </div>
+                                    )}
+                                </div>
+
+                                {/* Description */}
+                                <p className="text-text-secondary mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">{edu.description}</p>
+
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                                    {/* Relevant Coursework */}
+                                    <div>
+                                        <h4 className="text-base sm:text-lg font-semibold text-text-primary mb-3">Relevant Coursework</h4>
+                                        <div className="space-y-2">
+                                            {edu.coursework.map((course, i) => (
+                                                <div key={i} className="flex items-center text-text-secondary">
+                                                    <span className="text-secondary mr-2 flex-shrink-0">▸</span>
+                                                    <span className="text-xs sm:text-sm">{course}</span>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    {/* Achievements */}
+                                    <div>
+                                        <h4 className="text-base sm:text-lg font-semibold text-text-primary mb-3">Achievements</h4>
+                                        <div className="space-y-2">
+                                            {edu.achievements.map((achievement, i) => (
+                                                <div key={i} className="flex items-start text-text-secondary">
+                                                    <span className="text-secondary mr-2 mt-1 flex-shrink-0">★</span>
+                                                    <span className="text-xs sm:text-sm">{achievement}</span>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+    )
+}
+
+export default Education

@@ -116,23 +116,7 @@ const Experience = () => {
           ))}
         </div>
 
-        {/* Education section */}
-        <div className="mt-20">
-          <h3 className="text-2xl font-semibold text-text-primary mb-8 text-center">Education</h3>
-          <div className="max-w-2xl mx-auto">
-            <div className="bg-surface border border-border-color rounded-xl p-6">
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-                <h4 className="text-lg font-semibold text-text-primary">Bachelor of Science in Computer Science</h4>
-                <span className="text-primary font-medium">2015 - 2019</span>
-              </div>
-              <p className="text-text-secondary mb-3">University of California, Berkeley</p>
-              <p className="text-text-secondary text-sm">
-                Relevant Coursework: Data Structures, Algorithms, Software Engineering, 
-                Database Systems, Computer Networks, Machine Learning
-              </p>
-            </div>
-          </div>
-        </div>
+
       </div>
     </section>
   )

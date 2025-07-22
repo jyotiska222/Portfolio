@@ -71,16 +71,16 @@ const Hero = () => {
 
         {/* Enhanced name with better gradient */}
         <div className="animate-slide-up opacity-0 animation-delay-500 animate-fill-forwards">
-          <h1 className="text-6xl md:text-8xl font-extrabold mb-8 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 dark:from-blue-400 dark:via-purple-400 dark:to-blue-300 bg-clip-text text-transparent leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-extrabold mb-6 sm:mb-8 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 dark:from-blue-400 dark:via-purple-400 dark:to-blue-300 bg-clip-text text-transparent leading-tight px-2">
             Alex Johnson
           </h1>
         </div>
 
         {/* Enhanced dynamic title with better styling */}
         <div className="animate-slide-up opacity-0 animation-delay-700 animate-fill-forwards">
-          <div className="h-20 flex items-center justify-center mb-8">
+          <div className="h-16 sm:h-20 flex items-center justify-center mb-6 sm:mb-8 px-4">
             <div className="relative">
-              <h2 className="text-2xl md:text-4xl font-bold text-gray-700 dark:text-gray-300 relative">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-700 dark:text-gray-300 relative text-center">
                 <span className="relative z-10">{displayText}</span>
                 <span className="animate-pulse text-blue-500 ml-1 relative z-10">|</span>
                 {/* Animated underline */}
@@ -92,7 +92,7 @@ const Hero = () => {
 
         {/* Enhanced description */}
         <div className="animate-slide-up opacity-0 animation-delay-900 animate-fill-forwards">
-          <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed font-light">
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed font-light px-4 text-center">
             Passionate about creating <span className="font-semibold text-blue-600 dark:text-blue-400">innovative solutions</span> and building 
             <span className="font-semibold text-purple-600 dark:text-purple-400"> scalable applications</span> that make a difference. 
             Let's turn ideas into reality.
@@ -100,12 +100,12 @@ const Hero = () => {
         </div>
 
         {/* Enhanced CTA buttons */}
-        <div className="animate-slide-up opacity-0 animation-delay-1100 animate-fill-forwards flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
+        <div className="animate-slide-up opacity-0 animation-delay-1100 animate-fill-forwards flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-12 sm:mb-16 px-4">
           <button
             onClick={() => scrollToSection('projects')}
-            className="group px-10 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-2xl font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 hover:-translate-y-1 transition-all duration-300 shadow-xl hover:shadow-2xl relative overflow-hidden"
+            className="group w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-2xl font-semibold text-base sm:text-lg hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 hover:-translate-y-1 transition-all duration-300 shadow-xl hover:shadow-2xl relative overflow-hidden"
           >
-            <span className="relative z-10 flex items-center gap-2">
+            <span className="relative z-10 flex items-center justify-center gap-2">
               View My Work
               <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
@@ -116,9 +116,9 @@ const Hero = () => {
           
           <button
             onClick={() => scrollToSection('contact')}
-            className="group px-10 py-4 border-2 border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 rounded-2xl font-semibold text-lg hover:bg-blue-600 dark:hover:bg-blue-500 hover:text-white transform hover:scale-105 hover:-translate-y-1 transition-all duration-300 backdrop-blur-sm bg-white/10 dark:bg-gray-800/20"
+            className="group w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 border-2 border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 rounded-2xl font-semibold text-base sm:text-lg hover:bg-blue-600 dark:hover:bg-blue-500 hover:text-white transform hover:scale-105 hover:-translate-y-1 transition-all duration-300 backdrop-blur-sm bg-white/10 dark:bg-gray-800/20"
           >
-            <span className="flex items-center gap-2">
+            <span className="flex items-center justify-center gap-2">
               Get In Touch
               <svg className="w-5 h-5 group-hover:rotate-12 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />

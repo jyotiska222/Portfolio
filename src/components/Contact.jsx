@@ -82,15 +82,15 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Contact Information */}
           <div>
-            <h3 className="text-2xl font-semibold text-text-primary mb-8">Let's Connect</h3>
+            <h3 className="text-xl sm:text-2xl font-semibold text-text-primary mb-6 sm:mb-8">Let's Connect</h3>
             
-            <div className="space-y-6 mb-8">
+            <div className="space-y-4 sm:space-y-6 mb-6 sm:mb-8">
               {contactInfo.map((info, index) => (
-                <div key={index} className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                <div key={index} className="flex items-center space-x-3 sm:space-x-4">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
                     {info.icon === 'mail' && <MailIcon className="w-6 h-6 text-blue-600 dark:text-blue-400" />}
                     {info.icon === 'phone' && <PhoneIcon className="w-6 h-6 text-green-600 dark:text-green-400" />}
                     {info.icon === 'location' && <LocationIcon className="w-6 h-6 text-purple-600 dark:text-purple-400" />}
@@ -115,15 +115,15 @@ const Contact = () => {
 
             {/* Social Links */}
             <div>
-              <h4 className="text-lg font-semibold text-text-primary mb-4">Follow Me</h4>
-              <div className="flex space-x-4">
+              <h4 className="text-base sm:text-lg font-semibold text-text-primary mb-3 sm:mb-4">Follow Me</h4>
+              <div className="flex space-x-3 sm:space-x-4">
                 {socialLinks.map((social) => (
                   <a
                     key={social.name}
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 bg-surface border border-border-color rounded-lg flex items-center justify-center text-xl hover:bg-primary hover:text-white hover:border-primary transition-all duration-200 hover:scale-110"
+                    className="w-10 h-10 sm:w-12 sm:h-12 bg-surface border border-border-color rounded-lg flex items-center justify-center text-lg sm:text-xl hover:bg-primary hover:text-white hover:border-primary transition-all duration-200 hover:scale-110"
                     title={social.name}
                   >
                     {social.icon === 'github' && <GitHubIcon className="w-6 h-6" />}
@@ -136,12 +136,12 @@ const Contact = () => {
             </div>
 
             {/* Availability Status */}
-            <div className="mt-8 p-4 bg-surface border border-border-color rounded-lg">
-              <div className="flex items-center space-x-3">
-                <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+            <div className="mt-6 sm:mt-8 p-3 sm:p-4 bg-surface border border-border-color rounded-lg">
+              <div className="flex items-start sm:items-center space-x-3">
+                <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse flex-shrink-0 mt-1 sm:mt-0"></div>
                 <div>
-                  <div className="text-text-primary font-medium">Available for new projects</div>
-                  <div className="text-text-secondary text-sm">Currently accepting freelance and full-time opportunities</div>
+                  <div className="text-text-primary font-medium text-sm sm:text-base">Available for new projects</div>
+                  <div className="text-text-secondary text-xs sm:text-sm">Currently accepting freelance and full-time opportunities</div>
                 </div>
               </div>
             </div>
@@ -149,10 +149,10 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div>
-            <h3 className="text-2xl font-semibold text-text-primary mb-8">Send a Message</h3>
+            <h3 className="text-xl sm:text-2xl font-semibold text-text-primary mb-6 sm:mb-8">Send a Message</h3>
             
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                 <div>
                   <label htmlFor="name" className="block text-text-primary font-medium mb-2">
                     Name *
@@ -164,7 +164,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-surface border border-border-color rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors text-text-primary"
+                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-surface border border-border-color rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors text-text-primary text-sm sm:text-base"
                     placeholder="Your name"
                   />
                 </div>
@@ -179,7 +179,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-surface border border-border-color rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors text-text-primary"
+                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-surface border border-border-color rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors text-text-primary text-sm sm:text-base"
                     placeholder="your.email@example.com"
                   />
                 </div>
@@ -196,7 +196,7 @@ const Contact = () => {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-surface border border-border-color rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors text-text-primary"
+                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-surface border border-border-color rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors text-text-primary text-sm sm:text-base"
                   placeholder="What's this about?"
                 />
               </div>
@@ -212,7 +212,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows={6}
-                  className="w-full px-4 py-3 bg-surface border border-border-color rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors text-text-primary resize-none"
+                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-surface border border-border-color rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors text-text-primary resize-none text-sm sm:text-base"
                   placeholder="Tell me about your project or opportunity..."
                 />
               </div>
