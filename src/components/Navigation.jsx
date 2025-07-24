@@ -10,25 +10,30 @@ const Navigation = () => {
     { id: 'hero', label: 'Home' },
     { id: 'about', label: 'About' },
     { id: 'skills', label: 'Skills' },
-    // { id: 'experience', label: 'Experience' },
     { id: 'education', label: 'Education' },
     { id: 'projects', label: 'Projects' },
     { id: 'contact', label: 'Contact' },
-    { id: 'portfolioos', label: 'Portfolio OS', href: 'https://jyotiska-biswas-linux-portfolio.vercel.app', external: true}
+    { 
+      id: 'portfolioos', 
+      label: 'Portfolio OS', 
+      href: 'https://jyotiska-biswas-linux-portfolio.vercel.app',
+      external: true 
+    }
   ]
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
 
-      // Update active section based on scroll position
-      const sections = navItems.map(item => document.getElementById(item.id))
+      // Update active section based on scroll position (only for internal sections)
+      const internalSections = navItems.filter(item => !item.external)
+      const sections = internalSections.map(item => document.getElementById(item.id))
       const scrollPosition = window.scrollY + 100
 
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = sections[i]
         if (section && section.offsetTop <= scrollPosition) {
-          setActiveSection(navItems[i].id)
+          setActiveSection(internalSections[i].id)
           break
         }
       }
@@ -38,10 +43,15 @@ const Navigation = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [navItems])
 
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+  const handleNavigation = (item) => {
+    if (item.external) {
+      window.open(item.href, '_blank')
+    } else {
+      const element = document.getElementById(item.id)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
+      setIsMobileMenuOpen(false)
     }
   }
 
@@ -55,7 +65,7 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <button
-              onClick={() => scrollToSection('hero')}
+              onClick={() => handleNavigation({ id: 'hero' })}
               className="text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent hover:scale-105 transition-transform"
             >
               &lt;Engineer/&gt;
@@ -68,14 +78,14 @@ const Navigation = () => {
               {navItems.map((item) => (
                 <button
                   key={item.id}
-                  onClick={() => scrollToSection(item.id)}
+                  onClick={() => handleNavigation(item)}
                   className={`px-3 py-2 text-sm font-medium transition-all duration-200 relative ${activeSection === item.id
                     ? 'text-primary'
                     : 'text-text-secondary hover:text-text-primary'
                     }`}
                 >
                   {item.label}
-                  {activeSection === item.id && (
+                  {activeSection === item.id && !item.external && (
                     <div className="absolute bottom-0 left-0 w-full h-0.5 bg-primary rounded-full animate-fade-in" />
                   )}
                 </button>
@@ -111,11 +121,8 @@ const Navigation = () => {
             {navItems.map((item) => (
               <button
                 key={item.id}
-                onClick={() => {
-                  scrollToSection(item.id)
-                  setIsMobileMenuOpen(false)
-                }}
-                className={`block px-3 py-2 text-base font-medium w-full text-left transition-colors rounded-lg ${activeSection === item.id
+                onClick={() => handleNavigation(item)}
+                className={`block px-3 py-2 text-base font-medium w-full text-left transition-colors rounded-lg ${activeSection === item.id && !item.external
                   ? 'text-primary bg-primary/10'
                   : 'text-text-secondary hover:text-text-primary hover:bg-surface-elevated'
                   }`}
