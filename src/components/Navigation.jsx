@@ -14,7 +14,7 @@ const Navigation = () => {
     { id: 'education', label: 'Education' },
     { id: 'projects', label: 'Projects' },
     { id: 'contact', label: 'Contact' },
-    { id: 'portfolioos', label: 'Portfolio OS', href: 'https://jyotiska-biswas-linux-portfolio.vercel.app'}
+    { id: 'portfolioos', label: 'Portfolio OS', href: 'https://jyotiska-biswas-linux-portfolio.vercel.app', external: true}
   ]
 
   useEffect(() => {
