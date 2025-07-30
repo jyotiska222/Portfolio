@@ -3,47 +3,47 @@ import { CodeIcon, CogIcon, CloudIcon, TrophyIcon, CertificateIcon, StarIcon } f
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Frontend",
+      title: "Languages",
       icon: "code",
       skills: [
-        { name: "React", level: 95 },
-        { name: "TypeScript", level: 90 },
-        { name: "Next.js", level: 85 },
-        { name: "Tailwind CSS", level: 92 },
-        { name: "Vue.js", level: 80 }
+        { name: "Python", level: 90 },
+        { name: "JavaScript", level: 85 },
+        { name: "C++", level: 80 },
+        { name: "C", level: 75 },
+        { name: "HTML/CSS", level: 88 }
       ]
     },
     {
-      title: "Backend",
+      title: "Web Technologies",
       icon: "cog",
       skills: [
-        { name: "Node.js", level: 90 },
-        { name: "Python", level: 85 },
-        { name: "PostgreSQL", level: 88 },
-        { name: "MongoDB", level: 82 },
-        { name: "GraphQL", level: 78 }
+        { name: "React.js", level: 85 },
+        { name: "Node.js", level: 80 },
+        { name: "Express.js", level: 78 },
+        { name: "Flask", level: 82 },
+        { name: "Tailwind CSS", level: 85 }
       ]
     },
     {
-      title: "DevOps & Cloud",
-      icon: "cloud",
-      skills: [
-        { name: "AWS", level: 85 },
-        { name: "Docker", level: 88 },
-        { name: "Kubernetes", level: 75 },
-        { name: "CI/CD", level: 82 },
-        { name: "Terraform", level: 70 }
-      ]
-    },
-    {
-      title: "Tools & Others",
+      title: "Machine Learning",
       icon: "star",
       skills: [
-        { name: "Git", level: 95 },
-        { name: "Linux", level: 85 },
-        { name: "Jest", level: 80 },
-        { name: "Figma", level: 75 },
-        { name: "Agile", level: 90 }
+        { name: "TensorFlow", level: 80 },
+        { name: "OpenCV", level: 75 },
+        { name: "Scikit-learn", level: 78 },
+        { name: "NumPy", level: 85 },
+        { name: "Pandas", level: 82 }
+      ]
+    },
+    {
+      title: "Tools & Databases",
+      icon: "cloud",
+      skills: [
+        { name: "Git/GitHub", level: 90 },
+        { name: "MongoDB", level: 80 },
+        { name: "MySQL", level: 75 },
+        { name: "VS Code", level: 95 },
+        { name: "Linux", level: 70 }
       ]
     }
   ]
@@ -55,7 +55,7 @@ const Skills = () => {
         <span className="text-text-secondary text-sm">{skill.level}%</span>
       </div>
       <div className="w-full bg-surface-elevated rounded-full h-2 overflow-hidden">
-        <div 
+        <div
           className="h-full bg-primary rounded-full transition-all duration-1000 ease-out"
           style={{ width: `${skill.level}%` }}
         ></div>
@@ -79,7 +79,7 @@ const Skills = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
           {skillCategories.map((category, index) => (
-            <div 
+            <div
               key={category.title}
               className="bg-background border border-border-color rounded-xl p-4 sm:p-6 hover:shadow-lg transition-all duration-300 hover:border-primary/30"
               style={{ animationDelay: `${index * 100}ms` }}
@@ -93,7 +93,7 @@ const Skills = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-text-primary">{category.title}</h3>
               </div>
-              
+
               <div className="space-y-4">
                 {category.skills.map((skill) => (
                   <SkillBar key={skill.name} skill={skill} />
@@ -106,28 +106,33 @@ const Skills = () => {
         {/* Additional certifications or achievements */}
         <div className="mt-12 sm:mt-16 text-center">
           <h3 className="text-xl sm:text-2xl font-semibold text-text-primary mb-6 sm:mb-8">Certifications & Achievements</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
-            <div className="bg-background border border-border-color rounded-lg p-4 sm:p-6 hover:bg-surface-elevated transition-colors">
-              <div className="mb-3 flex justify-center">
-                <TrophyIcon className="w-8 h-8 text-accent" />
-              </div>
-              <h4 className="font-semibold text-text-primary mb-2">AWS Certified</h4>
-              <p className="text-text-secondary text-sm">Solutions Architect Associate</p>
-            </div>
-            <div className="bg-background border border-border-color rounded-lg p-6 hover:bg-surface-elevated transition-colors">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+            <a
+              href="https://www.udemy.com/certificate/UC-d6f72e20-3baf-44ff-8244-2c1fff0cabb8/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-background border border-border-color rounded-lg p-4 sm:p-6 hover:bg-surface-elevated hover:border-primary/30 transition-all duration-300 transform hover:scale-105 cursor-pointer block"
+            >
               <div className="mb-3 flex justify-center">
                 <CertificateIcon className="w-8 h-8 text-primary" />
               </div>
-              <h4 className="font-semibold text-text-primary mb-2">Google Cloud</h4>
-              <p className="text-text-secondary text-sm">Professional Developer</p>
-            </div>
-            <div className="bg-background border border-border-color rounded-lg p-6 hover:bg-surface-elevated transition-colors">
+              <h4 className="font-semibold text-text-primary mb-2">Machine Learning with R Studio</h4>
+              <p className="text-text-secondary text-sm">Complete ML Course - Udemy</p>
+              <p className="text-primary text-xs mt-2 font-medium">View Certificate →</p>
+            </a>
+            <a
+              href="https://www.udemy.com/certificate/UC-73e05f8c-78bf-4bbc-b3b4-c26d2b3c59f0/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-background border border-border-color rounded-lg p-4 sm:p-6 hover:bg-surface-elevated hover:border-primary/30 transition-all duration-300 transform hover:scale-105 cursor-pointer block"
+            >
               <div className="mb-3 flex justify-center">
-                <StarIcon className="w-8 h-8 text-secondary" />
+                <TrophyIcon className="w-8 h-8 text-accent" />
               </div>
-              <h4 className="font-semibold text-text-primary mb-2">Open Source</h4>
-              <p className="text-text-secondary text-sm">500+ GitHub contributions</p>
-            </div>
+              <h4 className="font-semibold text-text-primary mb-2">Python Bootcamp</h4>
+              <p className="text-text-secondary text-sm">Master Python Visually - Udemy</p>
+              <p className="text-accent text-xs mt-2 font-medium">View Certificate →</p>
+            </a>
           </div>
         </div>
       </div>

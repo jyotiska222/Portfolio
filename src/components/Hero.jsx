@@ -4,13 +4,13 @@ const Hero = () => {
   const [displayText, setDisplayText] = useState('')
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isDeleting, setIsDeleting] = useState(false)
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
-  
+  const [, setMousePosition] = useState({ x: 0, y: 0 })
+
   const titles = useMemo(() => [
-    'Software Engineer',
     'Full Stack Developer',
-    'Problem Solver',
-    'Tech Innovator'
+    'ML Engineer',
+    'IT Student',
+    'Problem Solver'
   ], [])
 
   // Enhanced typewriter effect
@@ -72,7 +72,7 @@ const Hero = () => {
         {/* Enhanced name with better gradient */}
         <div className="animate-slide-up opacity-0 animation-delay-500 animate-fill-forwards">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-extrabold mb-6 sm:mb-8 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 dark:from-blue-400 dark:via-purple-400 dark:to-blue-300 bg-clip-text text-transparent leading-tight px-2">
-            Alex Johnson
+            Jyotiska Biswas
           </h1>
         </div>
 
@@ -93,9 +93,8 @@ const Hero = () => {
         {/* Enhanced description */}
         <div className="animate-slide-up opacity-0 animation-delay-900 animate-fill-forwards">
           <p className="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed font-light px-4 text-center">
-            Passionate about creating <span className="font-semibold text-blue-600 dark:text-blue-400">innovative solutions</span> and building 
-            <span className="font-semibold text-purple-600 dark:text-purple-400"> scalable applications</span> that make a difference. 
-            Let's turn ideas into reality.
+            Driven 3rd-year IT student skilled in <span className="font-semibold text-blue-600 dark:text-blue-400">full-stack development</span> and
+            <span className="font-semibold text-purple-600 dark:text-purple-400"> machine learning</span>. Building real-world solutions through projects and hackathons.
           </p>
         </div>
 
@@ -113,7 +112,7 @@ const Hero = () => {
             </span>
             <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </button>
-          
+
           <button
             onClick={() => scrollToSection('contact')}
             className="group w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 border-2 border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 rounded-2xl font-semibold text-base sm:text-lg hover:bg-blue-600 dark:hover:bg-blue-500 hover:text-white transform hover:scale-105 hover:-translate-y-1 transition-all duration-300 backdrop-blur-sm bg-white/10 dark:bg-gray-800/20"

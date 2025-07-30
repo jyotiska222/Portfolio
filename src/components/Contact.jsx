@@ -37,34 +37,33 @@ const Contact = () => {
     {
       icon: 'mail',
       label: 'Email',
-      value: 'alex.johnson@email.com',
-      link: 'mailto:alex.johnson@email.com'
+      value: 'j.biswas0022@gmail.com',
+      link: 'mailto:j.biswas0022@gmail.com'
     },
     {
       icon: 'phone',
       label: 'Phone',
-      value: '+1 (555) 123-4567',
-      link: 'tel:+15551234567'
+      value: '+91-6290****29',
+      link: 'tel:+916290668829'
     },
     {
       icon: 'location',
       label: 'Location',
-      value: 'San Francisco, CA',
+      value: 'Barrackpore, Kolkata, West Bengal',
       link: null
     },
     {
       icon: 'linkedin',
       label: 'LinkedIn',
-      value: 'linkedin.com/in/alexjohnson',
-      link: 'https://linkedin.com/in/alexjohnson'
+      value: 'Jyotiska Biswas',
+      link: 'https://www.linkedin.com/in/jyotiska-biswas-019b75290/'
     }
   ]
 
   const socialLinks = [
-    { name: 'GitHub', icon: 'github', url: 'https://github.com' },
-    { name: 'LinkedIn', icon: 'linkedin', url: 'https://linkedin.com' },
-    { name: 'Twitter', icon: 'twitter', url: 'https://twitter.com' },
-    { name: 'Medium', icon: 'medium', url: 'https://medium.com' }
+    { name: 'GitHub', icon: 'github', url: 'https://github.com/jyotiska222' },
+    { name: 'LinkedIn', icon: 'linkedin', url: 'https://www.linkedin.com/in/jyotiska-biswas-019b75290/' },
+    { name: 'Twitter', icon: 'twitter', url: 'https://www.linkedin.com/in/jyotiska-biswas-019b75290/' }
   ]
 
   return (
@@ -140,8 +139,8 @@ const Contact = () => {
               <div className="flex items-start sm:items-center space-x-3">
                 <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse flex-shrink-0 mt-1 sm:mt-0"></div>
                 <div>
-                  <div className="text-text-primary font-medium text-sm sm:text-base">Available for new projects</div>
-                  <div className="text-text-secondary text-xs sm:text-sm">Currently accepting freelance and full-time opportunities</div>
+                  <div className="text-text-primary font-medium text-sm sm:text-base">Open to opportunities</div>
+                  <div className="text-text-secondary text-xs sm:text-sm">Seeking internships and entry-level positions in software development</div>
                 </div>
               </div>
             </div>
@@ -242,7 +241,7 @@ const Contact = () => {
         {/* Footer */}
         <div className="mt-20 pt-8 border-t border-border-color text-center">
           <p className="text-text-secondary">
-            © 2025 Alex Johnson. Built with React, Tailwind CSS, and lots of coffee
+            © 2025 Jyotiska Biswas. Built with React, Tailwind CSS, and lots of coffee
           </p>
         </div>
       </div>

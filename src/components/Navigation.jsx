@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import ThemeToggle from './ThemeToggle'
 
 const Navigation = () => {
@@ -6,7 +6,7 @@ const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
-  const navItems = [
+  const navItems = useMemo(() => [
     { id: 'hero', label: 'Home' },
     { id: 'about', label: 'About' },
     { id: 'skills', label: 'Skills' },
@@ -19,7 +19,7 @@ const Navigation = () => {
       href: 'https://jyotiska-biswas-linux-portfolio.vercel.app',
       external: true 
     }
-  ]
+  ], [])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -68,7 +68,7 @@ const Navigation = () => {
               onClick={() => handleNavigation({ id: 'hero' })}
               className="text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent hover:scale-105 transition-transform"
             >
-              &lt;Engineer/&gt;
+              &lt;Jyotiska/&gt;
             </button>
           </div>
 

@@ -1,24 +1,24 @@
 const Education = () => {
     const education = [
         {
-            degree: "Bachelor of Science in Computer Science",
-            institution: "University of California, Berkeley",
-            period: "2015 - 2019",
-            location: "Berkeley, CA",
-            description: "Comprehensive computer science program with focus on software engineering and system design.",
+            degree: "Bachelor of Technology (B.Tech) in Information Technology",
+            institution: "Kalyani Government Engineering College",
+            period: "2023 - 2027",
+            location: "West Bengal, India",
+            description: "Comprehensive IT program with focus on software development, machine learning, and system design. Currently in 3rd year with strong academic performance.",
             coursework: [
                 "Data Structures & Algorithms",
-                "Software Engineering",
-                "Database Systems",
-                "Computer Networks",
                 "Machine Learning",
-                "Operating Systems"
+                "Web Technologies",
+                "Database Management Systems",
+                "Computer Networks",
+                "Software Engineering"
             ],
-            gpa: "3.8/4.0",
+            gpa: "Currently pursuing",
             achievements: [
-                "Dean's List for 6 consecutive semesters",
-                "President of Computer Science Student Association",
-                "Winner of Annual Hackathon 2018"
+                "Active participant in competitive programming",
+                "Multiple hackathon participations (Hack4Bengal 2024, FrostHack 2024)",
+                "Built real-world projects with modern tech stack"
             ]
         }
     ]

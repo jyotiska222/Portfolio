@@ -21,12 +21,12 @@ const About = () => {
   }, [])
 
   const stats = [
-    { number: '50+', label: 'Projects Completed', icon: 'rocket', color: 'text-blue-600 dark:text-blue-400' },
-    { number: '5+', label: 'Years Experience', icon: 'star', color: 'text-green-600 dark:text-green-400' },
+    { number: '10+', label: 'Projects Completed', icon: 'rocket', color: 'text-blue-600 dark:text-blue-400' },
+    { number: '3+', label: 'Years Learning', icon: 'star', color: 'text-green-600 dark:text-green-400' },
     { number: '24/7', label: 'Learning Mode', icon: 'brain', color: 'text-purple-600 dark:text-purple-400' }
   ]
 
-  const skills = ['JavaScript', 'React', 'Node.js', 'Python', 'AWS', 'Docker']
+  const skills = ['Python', 'JavaScript', 'React', 'Node.js', 'TensorFlow', 'MongoDB']
 
   return (
     <section id="about" className="py-24 px-4 sm:px-6 lg:px-8 relative">
@@ -83,16 +83,15 @@ const About = () => {
           <div className={`space-y-8 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
             <div className="prose prose-xl max-w-none">
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg mb-6">
-                I'm a passionate <span className="font-bold text-blue-600 dark:text-blue-400">software engineer</span> with over 5 years of experience in building 
-                scalable web applications and solving complex technical challenges. My journey 
-                started with a curiosity about how things work, which led me to pursue computer 
-                science and fall in love with coding.
+                I'm a driven <span className="font-bold text-blue-600 dark:text-blue-400">3rd-year IT student</span> at Kalyani Government Engineering College, 
+                passionate about building real-world solutions through projects, hackathons, and competitive programming. 
+                My journey combines academic excellence with hands-on experience in cutting-edge technologies.
               </p>
               
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
-                I specialize in <span className="font-bold text-purple-600 dark:text-purple-400">full-stack development</span> with expertise in modern JavaScript 
-                frameworks, cloud technologies, and system architecture. I believe in writing 
-                clean, maintainable code and creating user experiences that truly matter.
+                I specialize in <span className="font-bold text-purple-600 dark:text-purple-400">full-stack development</span> and <span className="font-bold text-green-600 dark:text-green-400">machine learning</span>, 
+                with expertise in Python, JavaScript frameworks, and AI/ML technologies. I believe in creating 
+                innovative solutions that make a real impact in people's lives.
               </p>
             </div>
 
@@ -137,19 +136,19 @@ const About = () => {
                 <div className="flex"><span className="text-blue-400 mr-2">{`{`}</span></div>
                 <div className="ml-4 flex">
                   <span className="text-green-400">"location":</span> 
-                  <span className="text-yellow-300 ml-2">"San Francisco, CA"</span><span className="text-gray-500">,</span>
+                  <span className="text-yellow-300 ml-2">"Barrackpore, Kolkata, West Bengal"</span><span className="text-gray-500">,</span>
                 </div>
                 <div className="ml-4 flex">
                   <span className="text-green-400">"education":</span> 
-                  <span className="text-yellow-300 ml-2">"BS Computer Science"</span><span className="text-gray-500">,</span>
+                  <span className="text-yellow-300 ml-2">"B.Tech Information Technology"</span><span className="text-gray-500">,</span>
                 </div>
                 <div className="ml-4 flex">
                   <span className="text-green-400">"interests":</span> 
-                  <span className="text-purple-300 ml-2">["AI/ML", "Open Source", "Photography"]</span><span className="text-gray-500">,</span>
+                  <span className="text-purple-300 ml-2">["AI/ML", "Full-Stack Dev", "Competitive Programming"]</span><span className="text-gray-500">,</span>
                 </div>
                 <div className="ml-4 flex">
                   <span className="text-green-400">"currentFocus":</span> 
-                  <span className="text-yellow-300 ml-2">"Cloud Architecture"</span><span className="text-gray-500">,</span>
+                  <span className="text-yellow-300 ml-2">"Machine Learning & Web Development"</span><span className="text-gray-500">,</span>
                 </div>
                 <div className="ml-4 flex">
                   <span className="text-green-400">"status":</span> 
